@@ -4,10 +4,11 @@ const pool = require('../modules/pool')
 
 
 // TODO: This route adds a new feedback entry
-//
+//save a new feedback received from the front/react. 
 router.post('/', (req, res) => {
     const query = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
 VALUES ($1, $2, $3, $4);`
+//get what was sent from req.body.
     pool.query(query, [req.body.feeling, req.body.understanding, req.body.support, req.body.comments]).then(result => {
         res.sendStatus(201)
     }).catch(err => {

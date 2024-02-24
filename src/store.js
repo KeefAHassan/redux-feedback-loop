@@ -21,6 +21,14 @@ const feedback = (state = {
     if (action.type === "ADD_COMMENT") {
         return { ...state, comment: action.payload };
     }
+    if (action.type === "CLEAR_FEEDBACK") {
+        return {
+            feeling: 0,
+            understanding: 0,
+            support: 0,
+            comment: "",
+        };
+    }
 
 
     return state;

@@ -18,6 +18,7 @@ function Understanding() {
             name="understanding"
             value={understanding}
             onChange={(e) => setUnderstanding(e.target.value)}
+            data-testid="input"
           />
         </div>
         <button
@@ -28,6 +29,7 @@ function Understanding() {
             });
             history.push("/support");
           }}
+          data-testid="next"
         >
           Next
         </button>

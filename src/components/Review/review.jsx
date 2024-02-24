@@ -26,7 +26,7 @@ function Review() {
       <p>Understanding:{feedback.understanding}</p>
       <p>Support:{feedback.support}</p>
       <p>Comment:{feedback.comment}</p>
-      <button onClick={()=> submit()}>submit</button>
+      <button onClick={()=> submit()} data-testid="next">submit</button>
     </div>
   );
 }

@@ -17,6 +17,7 @@ function Feeling() {
             name="feeling"
             value={feeling}
             onChange={(e) => setFeeling(e.target.value)}
+            data-testid="input"
           />
         </div>
         <button
@@ -28,6 +29,7 @@ function Feeling() {
             history.push("/understanding")
 
           }}
+          data-testid="next"
         >
           Next
         </button>

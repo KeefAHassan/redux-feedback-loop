@@ -17,6 +17,7 @@ function Comments() {
             name="comments"
             value={comment}
             onChange={(e) => setComment(e.target.value)}
+            data-testid="input"
           />
         </div>
         <button
@@ -27,6 +28,7 @@ function Comments() {
             });
             history.push("/review");
           }}
+          data-testid="next"
         >
           Next
         </button>

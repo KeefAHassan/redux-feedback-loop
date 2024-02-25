@@ -5,13 +5,14 @@ import { useHistory } from "react-router-dom";
 function Feeling() {
   const dispatch = useDispatch();
   const [feeling, setFeeling] = useState(0);
-  const history =useHistory()
+  const history = useHistory();
   return (
     <div className="container">
       <h1>How are you feeling today?</h1>
       <div className="content">
         <div className="input">
           <label htmlFor="feeling">Feeling?</label>
+
           <input
             type="number"
             name="feeling"
@@ -26,8 +27,7 @@ function Feeling() {
               type: "ADD_FEELING",
               payload: feeling,
             });
-            history.push("/understanding")
-
+            history.push("/understanding");
           }}
           data-testid="next"
         >
